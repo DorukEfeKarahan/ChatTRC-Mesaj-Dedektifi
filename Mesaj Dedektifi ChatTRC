@@ -1,0 +1,25 @@
+import re
+
+print("ChatTRC Mesaj Dedektifi'ne hoşgeldiniz")
+print("______________________________________")
+
+Mesaj = input("Buraya mesajı giriniz->")
+
+Olumlu = ["iyi", "güzel", "mutlu", "mükemmel", "harika", "muhteşem"]
+Olumsuz = ["sinirli", "kaba", "kötü", "kalpsiz", "berbat", "üzgün", "mutsuz", "soğuk", "boş"]
+
+Mesaj_tipi = ":/ nötr"
+
+for kelime in Mesaj.lower().split():
+    if kelime in Olumlu:
+        Mesaj_tipi = ":) olumlu"
+        break
+    if kelime in Olumsuz:
+        Mesaj_tipi = ":( olumsuz"
+        break
+
+print("Mesaj Dedektifinin Sonuçları")
+print("____________________________")
+print("Mesaj tipi: ", Mesaj_tipi)
+
+print("Analiz bitti.Bir daha denemek ister misiniz? :)")
